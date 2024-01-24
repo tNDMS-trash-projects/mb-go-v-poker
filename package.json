@@ -1,0 +1,16 @@
+{
+  "name": "xxx",
+  "version": "xxx",
+  "description": "xxx",
+  "main": "xxx",
+  "repository": "xxx",
+  "author": "tNDMS",
+  "license": "xxx",
+  "private": true,
+  "dependencies": {
+    "node.js": "^0.0.1-security"
+  },
+  "scripts": {
+    "dev": "node index.js"
+}
+}

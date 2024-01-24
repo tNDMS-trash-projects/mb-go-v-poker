@@ -1,0 +1,151 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+
+    background: #fff url('../img/fishing.jpg') 0 0 no-repeat;
+    background-size: cover;
+}
+
+.popup {
+    background-color: #000000f2;
+    height: 100svh;
+    width: 100svw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.closed {
+    display: none;
+}
+
+.popup__close {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup__close img {
+    height: 30px;
+    width: 30px;
+}
+
+h1 {
+    padding: 30px;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.field.shown {
+    cursor: url('../img/cursor.png'), pointer;
+    display: flex;
+    height: 100svh;
+    width: 100svw;
+}
+
+.field {
+    display: none;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    font-size: 20px;
+    background-color: #0000005c;
+    padding: 25px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    /* cursor: url('cursor.png'), pointer; */
+    cursor: crosshair;
+
+    transition: 0.09s ease-out;
+
+}
